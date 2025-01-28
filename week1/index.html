@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Internal stylesheet -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .resume-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .section-title {
+      color: #0056b3;
+      margin-top: 20px;
+      font-size: 20px;
+      border-bottom: 2px solid #0056b3;
+      padding-bottom: 5px;
+    }
+
+    p, ul {
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <h1>My Resume</h1>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <p><strong>Name:</strong> Your Name</p>
+      <p><strong>Email:</strong> yourname@example.com</p>
+      <p><strong>Phone:</strong> +123 456 7890</p>
+      <p><strong>LinkedIn:</strong> <a href="#" style="color: #007bff; text-decoration: none;">linkedin.com/in/yourname</a></p>
+    </div>
+
+    <!-- Education -->
+    <div>
+      <h2 class="section-title">Education</h2>
+      <p><strong>Bachelor of Computer Science</strong></p>
+      <p>XYZ University, 2022 - Present</p>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <h2 class="section-title">Projects</h2>
+      <p><strong>FitInsights</strong> - A data analytics project analyzing fitness tracker metrics like steps, calories burned, and sleep patterns.</p>
+      <p><strong>Open Source GitHub Analyzer</strong> - A data analytics tool providing insights to enhance GitHub open-source contributions.</p>
+    </div>
+
+    <!-- Skills -->
+    <div>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>Data Analysis</span>
+        <span>Power BI</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+        <span>GitHub</span>
+        <span>Problem Solving</span>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div>
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Google Data Analytics Certification</li>
+        <li>Python for Data Science by IBM</li>
+        <li>Introduction to Cybersecurity by Cisco</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
