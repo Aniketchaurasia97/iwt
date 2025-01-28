@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Forms Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4500b5;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Google Forms Clone</h1>
+</header>
+
+<main>
+    <h2>Feedback Form</h2>
+    <!-- <form action="#" method="post" onsubmit="return customSubmitHandler()" novalidate> -->
+    <form action="#" method="get" novalidate >
+        <!-- Name Input -->
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" maxlength="100" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a strong password" minlength="8" required>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="form-group">
+            <label for="date">Date of Visit:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <!-- Time Picker -->
+        <div class="form-group">
+            <label for="time">Time of Visit:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <!-- Dropdown List -->
+        <div class="form-group">
+            <label for="service">Service Used:</label>
+            <select id="service" name="service" required>
+                <option value="">--Select--</option>
+                <option value="consulting">Consulting</option>
+                <option value="support">Support</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Checkbox Group -->
+        <div class="form-group">
+            <label>Hobbies:</label>
+            <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+            <label for="hobby-reading">Reading</label><br>
+            <input type="checkbox" id="hobby-sports" name="hobbies" value="sports">
+            <label for="hobby-sports">Sports</label><br>
+            <input type="checkbox" id="hobby-coding" name="hobbies" value="coding">
+            <label for="hobby-coding">Coding</label>
+        </div>
+
+        <!-- Radio Button Group -->
+        <div class="form-group">
+            <label>Would you recommend us?</label><br>
+            <input type="radio" id="recommend-yes" name="recommend" value="yes" required>
+            <label for="recommend-yes">Yes</label><br>
+            <input type="radio" id="recommend-no" name="recommend" value="no">
+            <label for="recommend-no">No</label>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+            <label for="upload">Upload Supporting Document:</label>
+            <input type="file" id="upload" name="upload" multiple>
+        </div>
+
+        <!-- Text Area -->
+        <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Enter your feedback here..." maxlength="500"></textarea>
+        </div>
+
+        <!-- Range Input -->
+        <div class="form-group">
+            <label for="rating">Rate Our Services:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1">
+        </div>
+
+        <!-- Color Picker -->
+        <div class="form-group">
+            <label for="color">Pick Your Favorite Color:</label>
+            <input type="color" id="color" name="color" value="#6200ea">
+        </div>
+
+        <!-- Hidden Input -->
+        <input type="hidden" name="form_id" value="google-forms-clone">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function customSubmitHandler() {
+            // Custom form submission logic
+            alert('Form submitted!');
+            return false; // Prevent default form submission
+        }
+    </script>
+</main>
+
+</body>
+</html>
