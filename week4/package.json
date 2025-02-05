@@ -1,0 +1,14 @@
+{
+  "name": "akxmlweek4",
+  "version": "1.0.0",
+  "description": "\"to test all the working of the xml document and its dependency- xsd-schema-validator\"",
+  "main": "validation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ak",
+  "license": "ISC",
+  "dependencies": {
+    "xsd-schema-validator": "^0.11.0"
+  }
+}
