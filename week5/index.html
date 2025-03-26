@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies & Regex</title>
+    <script>
+      // pingng the server of express on port 8000
+      function pingServer() {
+        fetch("http://localhost:8000/", {
+          withCredentials: true,
+          credentials: "include",
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.error(error));
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Cookies & Regex</h1>
+    <button onclick="pingServer()">Ping Server</button>
+    <input type="text" id="mobileNumber" placeholder="Enter mobile number" />
+    <button onclick="checkMobileNumber()">Check Mobile Number</button>
+
+    <script>
+      function checkMobileNumber() {
+        const mobileNumber = document.getElementById("mobileNumber").value;
+        fetch(`http://localhost:8000/check-mobile`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ mobileNumber }),
+          withCredentials: true,
+          credentials: "include",
+          })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          alert(data.message);          
+          })
+          .catch((error) => {
+            console.error(error);
+            alert("error occured try again");
+          });
+      }
+    </script>
+  </body>
+</html>
